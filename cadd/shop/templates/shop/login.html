@@ -1,0 +1,35 @@
+{% extends 'shop/layouts/main.html' %}
+{%block title%}
+Registration | online shopping
+{%endblock title%}
+{%block content%}
+<div class="container" style="margin-top: 70PX;">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mb-3"> Login Page </h4>
+            <hr style="border-color: #b8bfc2;">
+        </div>
+    </div>
+</div>
+<section class="py-5 my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <label for='' class="form-label">username</label>
+                        <input type="text" name="username" id="username" class="form-control" placeholder="enter your name">
+                    </div>
+                    <div class="mb-4">
+                        <label for='' class="form-label">password</label>
+                        <input type="text" name="password" id="password" class="form-control" placeholder="enter your password">
+                        
+                    </div>
+                    <button type="submit" class="btn btn-primary">login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{%endblock content%}
